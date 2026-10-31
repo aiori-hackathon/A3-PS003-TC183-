@@ -1,3 +1,13 @@
+# AIORI-3-HACKATHON-PROJECTS
+
+This repository contains the code and resources for the AIORI-3 hackathon project developed during AIORI-3.
+
+YouTube video link: [Watch here on YouTube](https://youtu.be/3Stu3cYr3Lk?si=CVSLCMdG_vJ2UxFM)
+
+Documents: [Project write-up](<Federated Traffic-Flow Prediction Project.pdf>) • [Proposed structure](Proposed-structure-hackathon.pdf)
+
+---
+
 # FedTraffic — Federated Traffic-Flow Prediction with Communication-Cost Evaluation
 
 RuminateX • AIORI Hackathon 3 • PS-003
