@@ -112,3 +112,4 @@ cd backend && .venv/bin/python -m pytest -q
 ## Limitations
 
 Clients are simulated in one process. The forecaster is per-sensor (no spatial graph). Keeping data local is not a formal privacy guarantee (no secure aggregation / differential privacy).
+# ruminatex
