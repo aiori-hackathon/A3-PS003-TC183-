@@ -1,5 +1,9 @@
 # AIORI-3-HACKATHON-PROJECTS
 
+[![Live demo](https://img.shields.io/badge/Live%20demo-aiorirepo.vercel.app-000?logo=vercel)](https://aiorirepo.vercel.app/)
+
+**Live demo: [https://aiorirepo.vercel.app/](https://aiorirepo.vercel.app/)** (FedTraffic dashboard and backend API)
+
 This repository contains the code and resources for the AIORI-3 hackathon project developed during AIORI-3.
 
 YouTube video link: [Watch here on YouTube](https://youtu.be/3Stu3cYr3Lk?si=CVSLCMdG_vJ2UxFM)
