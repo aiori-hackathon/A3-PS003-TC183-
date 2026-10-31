@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#009668","surface-bright":"#f8f9ff","secondary-fixed-dim":"#93ccff","surface-container-lowest":"#ffffff","surface":"#f8f9ff","primary-fixed-dim":"#bec6e0","background":"#f8f9ff","error":"#ba1a1a","secondary-fixed":"#cce5ff","surface-container-low":"#eff4ff","on-error-container":"#93000a","on-secondary-container":"#00476e","tertiary-fixed-dim":"#4edea3","tertiary-container":"#002113","primary-container":"#131b2e","inverse-primary":"#bec6e0","outline":"#76777d","on-secondary-fixed-variant":"#004b73","surface-dim":"#cbdbf5","on-primary-fixed":"#131b2e","primary-fixed":"#dae2fd","on-tertiary":"#ffffff","secondary":"#006398","on-surface-variant":"#45464d","on-primary-fixed-variant":"#3f465c","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#005236","inverse-on-surface":"#eaf1ff","outline-variant":"#c6c6cd","tertiary-fixed":"#6ffbbe","on-error":"#ffffff","on-surface":"#0b1c30","secondary-container":"#5bb8fe","on-secondary-fixed":"#001d31","primary":"#000000","on-tertiary-fixed":"#002113","error-container":"#ffdad6","surface-tint":"#565e74","on-background":"#0b1c30","surface-container-high":"#dce9ff","on-primary-container":"#7c839b","tertiary":"#000000","on-secondary":"#ffffff","on-primary":"#ffffff","surface-variant":"#d3e4fe","surface-container-highest":"#d3e4fe","inverse-surface":"#213145"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin":"1rem","space-md":"0.75rem","space-lg":"1.25rem","gutter":"1rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem","space-xl":"2rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-lg":["JetBrains Mono"],"headline-xl":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["JetBrains Mono"],"headline-md":["Inter"]},"fontSize":{"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"700"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","fontWeight":"700"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","fontWeight":"500"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg py-space-sm mb-space-sm flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Smart Cities Lab</span><span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-space-xs rounded">PS-003</span></div><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight mt-space-xs">FedTraffic AIORI-3</span><span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">FL Telemetry &amp; Network Evaluator</span></div><div class="px-space-md mb-space-sm"><div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">ACTIVE CLUSTER</span><span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>ONLINE</span></div><div class="flex items-center justify-between text-on-surface font-label-md text-label-md"><span>5 Virtual Intersections</span><span class="font-label-sm text-label-sm text-secondary font-semibold">IID / Non-IID</span></div></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="problem-and-overview" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">assignment</span>Problem &amp; Overview</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="federated-simulator" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">memory</span>Federated Simulator</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="centralized-vs-fedavg-benchmark" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">compare_arrows</span>Centralized vs FedAvg Benchmark</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="client-non-iid-telemetry" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">hub</span>Client Non-IID Telemetry</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="communication-and-convergence-analysis" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">query_stats</span>Communication &amp; Convergence</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="deliverables-and-github-submission" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">terminal</span>Deliverables &amp; GitHub Submission</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1"><span class="font-label-sm text-label-sm text-on-surface-variant">EDGE TELEMETRY STREAM</span><div class="flex justify-between items-center"><span class="font-label-md text-label-md font-semibold text-on-surface">148.42 MB</span><span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">Tx 12.4 KB/s</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1"><div class="bg-secondary h-full w-2/3"></div></div></div><div class="px-space-xs py-space-xs flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant"><span>Sync: Round #48/50</span><span>Loss: 0.0418</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-margin-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="material-symbols-outlined text-[16px] text-secondary">tag</span><span class="font-label-sm text-label-sm text-on-surface-variant">Seeds:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">42, 128, 256 Active</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Edge Nodes:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">5 Connected</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">swap_vert</span><span class="font-label-sm text-label-sm text-on-surface-variant">Network:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">148.42 MB Transferred</span></div></div><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm transition-colors" href="https://github.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">code</span><span>GitHub Repo</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Utility Contextual Header -->
+<div class="w-full px-space-margin-desktop py-space-lg flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Empirical Evaluation • Problem Statement PS-003</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+        Communication vs. Convergence Trade-off
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+        Rigorous byte transmission profiling of edge-partitioned traffic models across 3 randomized trials (Seeds 42, 108, 999), quantifying the 99.8% bandwidth economy of weight synchronisation vs. continuous telemetry streaming.
+      </p>
+</div>
+<!-- Quick Action / LaTeX Export Trigger -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md rounded-lg transition-colors" onclick="toggleLatexModal(true)">
+<span class="material-symbols-outlined text-[16px] text-secondary">code_blocks</span>
+<span>Export LaTeX</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:opacity-90 transition-opacity" onclick="exportCSVData()">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download CSV Ledger</span>
+</button>
+</div>
+</div>
+<!-- Primary Metric Hero Banners: 99.8% Bandwidth Economy -->
+<div class="w-full px-space-margin-desktop pb-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<!-- Card 1: Raw Sensor Stream Cost -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Centralized Baseline</span>
+<span class="material-symbols-outlined text-[18px] text-error">cloud_sync</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">14.80 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">GB/day</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Continuous raw optical &amp; inductive telemetry stream per edge intersection</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-error">
+<span>Uncompressed Sensor I/O</span>
+<span>171.3 KB/s Mean</span>
+</div>
+</div>
+<!-- Card 2: FedAvg Synchronisation Cost -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">FedAvg Protocol</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">network_check</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-secondary font-bold">28.80 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">MB/day</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Quantized gradient updates + compact weight tensors (E=5 local epochs)</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>5 Node Federation</span>
+<span>50 Agg. Rounds</span>
+</div>
+</div>
+<!-- Card 3: Measured Bandwidth Reduction -->
+<div class="bg-primary text-on-primary p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary-fixed-dim">
+<span class="font-label-sm text-label-sm uppercase">Bandwidth Efficiency</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">eco</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold tracking-tight">99.80%</div>
+<p class="font-body-sm text-body-sm text-inverse-primary mt-1">Measured net traffic backhaul byte reduction over centralized cloud ingest</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-primary-fixed">
+<span>Target MAE: 0.0418</span>
+<span class="text-tertiary-fixed font-semibold">−14.77 GB / Node</span>
+</div>
+</div>
+<!-- Card 4: Mean Convergence Budget (3 Seeds) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Tri-Seed Convergence</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done_all</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">144.23 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">MB Avg</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Total global uplink budget to achieve test RMSE ≤ 0.062 (Seeds 42, 108, 999)</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-tertiary-container font-semibold">
+<span>Std Dev: ±2.15 MB</span>
+<span>48.3 Mean Rounds</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Deep Dive Analytics Grid: Pareto Frontier & Epoch Trade-off Analysis -->
+<div class="w-full px-space-margin-desktop pb-space-lg">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left (7 Cols): Pareto Frontier Accuracy vs Byte Transmission -->
+<div class="xl:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md pb-space-sm bg-surface-container-low/40 p-space-sm rounded-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Pareto Frontier: Accuracy vs. Uplink Overhead</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-semibold">PS-003</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Plotting Model Precision (Inverse MAE) against Cumulative Uplink Payload (MB)</p>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span> Pareto Optimal</span>
+<span class="flex items-center gap-1 text-on-surface-variant"><span class="w-2.5 h-2.5 rounded-full bg-outline-variant inline-block"></span> Sub-optimal</span>
+</div>
+</div>
+<!-- Pareto Frontier Chart Canvas (Inline Scalable SVG) -->
+<div class="relative w-full h-80 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between overflow-hidden">
+<!-- Background Grid Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 600 300">
+<!-- Grid X & Y -->
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="60" x2="60" y1="20" y2="260"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="180" x2="180" y1="20" y2="260"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="300" x2="300" y1="20" y2="260"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="420" x2="420" y1="20" y2="260"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="540" x2="540" y1="20" y2="260"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="60" x2="580" y1="60" y2="60"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="60" x2="580" y1="120" y2="120"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="60" x2="580" y1="180" y2="180"></line>
+<line stroke="#c6c6cd" stroke-dasharray="2 3" stroke-width="0.5" x1="60" x2="580" y1="240" y2="240"></line>
+<!-- Pareto Frontier Curve -->
+<path d="M 100 230 C 130 180, 200 110, 320 75 S 480 62, 550 58" fill="none" stroke="#006398" stroke-dasharray="4 2" stroke-width="3"></path>
+<!-- Shaded Feasible Region under curve -->
+<path d="M 100 230 C 130 180, 200 110, 320 75 S 480 62, 550 58 L 550 260 L 100 260 Z" fill="url(#pareto-grad)" opacity="0.1"></path>
+<defs>
+<lineargradient id="pareto-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006398"></stop>
+<stop offset="100%" stop-color="#ffffff"></stop>
+</lineargradient>
+</defs>
+<!-- Plot Points (Configs) -->
+<!-- Config 1: E=1, Comm heavy -->
+<circle cx="530" cy="60" fill="#006398" r="6"></circle>
+<text class="fill-on-surface font-label-sm text-[10px] font-semibold" x="440" y="55">E=1 (Over-communicated: 245 MB)</text>
+<!-- Config 2: E=5, Balanced / Sweet spot -->
+<circle cx="320" cy="75" fill="#009668" r="8" stroke="#ffffff" stroke-width="2"></circle>
+<text class="fill-on-tertiary-container font-label-md text-[11px] font-bold" x="260" y="60">Optimum: E=5 (144.2 MB)</text>
+<!-- Config 3: E=10, Client Drift -->
+<circle cx="210" cy="120" fill="#ba1a1a" r="6"></circle>
+<text class="fill-error font-label-sm text-[10px]" x="140" y="140">E=10 (Client Drift: 88 MB)</text>
+<!-- Config 4: E=20, Severe Non-IID Degradation -->
+<circle cx="120" cy="210" fill="#76777d" r="5"></circle>
+<text class="fill-outline font-label-sm text-[10px]" x="70" y="235">E=20 (Divergent)</text>
+<!-- Centralized Ingest Equivalent Marker -->
+<circle cx="570" cy="52" fill="#000000" r="4"></circle>
+<text class="fill-on-surface font-label-sm text-[10px]" x="430" y="35">Centralized Ingest (14,800 MB)</text>
+</svg>
+<!-- Axes Annotations -->
+<div class="flex justify-between items-center z-10 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<span>↑ Precision (1 / MAE) [Peak: 23.92]</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-semibold">Swept across Batch Size B=32, Adam LR=0.001</span>
+</div>
+<div class="flex justify-between items-center z-10 font-label-sm text-label-sm text-on-surface-variant pb-1">
+<span>50 MB</span>
+<span>100 MB</span>
+<span>150 MB (Balanced Frontier)</span>
+<span>200 MB</span>
+<span>250+ MB (Cumulative Uplink)</span>
+</div>
+</div>
+<!-- Bottom Insights Callout -->
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Drift Threshold</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5">E &gt; 8 Local Epochs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Non-IID traffic variance leads to weight divergence at intersections.</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Uplink Sweet-Spot</span>
+<span class="font-headline-sm text-headline-sm text-on-tertiary-container font-bold mt-0.5">144.23 MB Total</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Local epochs E=5 achieves 99.1% of centralized accuracy within 48 rounds.</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Payload Density</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold mt-0.5">582.4 KB / Sync</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bi-directional tensor exchange: 291.2 KB down, 291.2 KB up.</span>
+</div>
+</div>
+</div>
+<!-- Right (5 Cols): Epoch Optimization Trade-Off Table & Micro Diagnostics -->
+<div class="xl:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-low/40 p-space-sm rounded-lg">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Local Epoch Optimization (E)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Trade-off between client computation and network uplink cost</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+</div>
+<!-- Comparative Scenario Matrix -->
+<div class="flex flex-col gap-space-sm mt-space-sm">
+<!-- Row E=1 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-sm rounded-lg transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Configuration E = 1</span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 text-on-error-container px-1.5 py-0.5 rounded font-semibold">High Comm Overhead</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-on-surface-variant mt-1">
+<div>Rounds: <span class="font-semibold text-on-surface">32</span></div>
+<div>Bandwidth: <span class="font-semibold text-on-surface">246.8 MB</span></div>
+<div>MAE: <span class="font-semibold text-on-surface">0.0421</span></div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-2">
+<div class="bg-error h-full w-[88%]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-[11px]">Frequent model aggregation eliminates client drift, but consumes 71% more bandwidth.</p>
+</div>
+<!-- Row E=5 (Recommended Standard) -->
+<div class="bg-surface-container hover:bg-surface-container-high p-space-sm rounded-lg transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface">Configuration E = 5</span>
+<span class="font-label-sm text-label-sm bg-on-tertiary-container text-surface-lowest px-1.5 py-0.5 rounded text-white font-semibold">Selected Pareto Optimal</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">Recommended</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-on-surface-variant mt-1">
+<div>Rounds: <span class="font-semibold text-on-surface">48</span></div>
+<div>Bandwidth: <span class="font-semibold text-on-surface">144.2 MB</span></div>
+<div>MAE: <span class="font-semibold text-on-surface">0.0418</span></div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-2">
+<div class="bg-on-tertiary-container h-full w-[51%]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-[11px]">Optimal balance: Minimizes network bytes while keeping non-IID drift bounded.</p>
+</div>
+<!-- Row E=10 -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-sm rounded-lg transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Configuration E = 10</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-fixed/50 px-1.5 py-0.5 rounded font-semibold">Drift Sensitive</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-on-surface-variant mt-1">
+<div>Rounds: <span class="font-semibold text-on-surface">65</span></div>
+<div>Bandwidth: <span class="font-semibold text-on-surface">97.8 MB</span></div>
+<div>MAE: <span class="font-semibold text-on-surface">0.0526</span></div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-2">
+<div class="bg-secondary-container h-full w-[35%]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-[11px]">Lower transmission cost, but client models overfit local peak-hour distributions.</p>
+</div>
+</div>
+</div>
+<!-- Seed Invariance Box -->
+<div class="mt-space-md p-space-sm bg-surface-container-high rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">casino</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Seed Variance Stability</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Across Seeds 42, 108, 999: Comm cost σ = 1.49%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-space-xs py-0.5 rounded font-semibold text-on-surface">Stable</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Transmission Cost Ledger & Seed Reproducibility Table -->
+<div class="w-full px-space-margin-desktop pb-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Byte Transmission Efficiency Ledger</h2>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Rounds 1 - 50 Aggregation History</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Round-by-round telemetry accounting: Downlink Broadcast vs. Uplink Delta Contributions across trials</p>
+</div>
+<!-- Filter Selector -->
+<div class="flex items-center gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="seed-filter">Active Run Seed:</label>
+<select class="bg-surface-container-low text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded border-none focus:outline-none focus:ring-1 focus:ring-secondary" id="seed-filter" onchange="switchSeedView(this.value)">
+<option value="all">Consolidated (3 Seeds Mean)</option>
+<option value="42">Seed 42 (142.10 MB Total)</option>
+<option value="108">Seed 108 (146.40 MB Total)</option>
+<option value="999">Seed 999 (144.20 MB Total)</option>
+</select>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Round #</th>
+<th class="py-space-sm px-space-md">Downlink Broadcast</th>
+<th class="py-space-sm px-space-md">Uplink Ingest (5 Clients)</th>
+<th class="py-space-sm px-space-md">Round Cumulative</th>
+<th class="py-space-sm px-space-md">Seed 42 Loss</th>
+<th class="py-space-sm px-space-md">Seed 108 Loss</th>
+<th class="py-space-sm px-space-md">Seed 999 Loss</th>
+<th class="py-space-sm px-space-md text-right">MAE</th>
+<th class="py-space-sm px-space-md text-right">Convergence Status</th>
+</tr>
+</thead>
+<tbody class="font-label-md text-label-md text-on-surface divide-y divide-surface-container-high/40" id="ledger-body">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-secondary">R-01</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">349.44 KB</td>
+<td class="py-space-sm px-space-md">0.3124</td>
+<td class="py-space-sm px-space-md">0.3201</td>
+<td class="py-space-sm px-space-md">0.3155</td>
+<td class="py-space-sm px-space-md text-right">0.1840</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Cold Start</span></td>
+</tr>
+<!-- Row 10 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-secondary">R-10</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">3.49 MB</td>
+<td class="py-space-sm px-space-md">0.1450</td>
+<td class="py-space-sm px-space-md">0.1488</td>
+<td class="py-space-sm px-space-md">0.1462</td>
+<td class="py-space-sm px-space-md text-right">0.0921</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary">Training</span></td>
+</tr>
+<!-- Row 25 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-secondary">R-25</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">8.73 MB</td>
+<td class="py-space-sm px-space-md">0.0682</td>
+<td class="py-space-sm px-space-md">0.0714</td>
+<td class="py-space-sm px-space-md">0.0699</td>
+<td class="py-space-sm px-space-md text-right">0.0543</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary">Training</span></td>
+</tr>
+<!-- Row 42 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-secondary">R-42</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">14.67 MB</td>
+<td class="py-space-sm px-space-md">0.0435</td>
+<td class="py-space-sm px-space-md">0.0451</td>
+<td class="py-space-sm px-space-md">0.0440</td>
+<td class="py-space-sm px-space-md text-right">0.0426</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-semibold">Near Plateau</span></td>
+</tr>
+<!-- Row 48 -->
+<tr class="bg-surface-container-low/70 hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-on-tertiary-container">R-48 ★</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">16.77 MB / Client</td>
+<td class="py-space-sm px-space-md font-bold text-on-tertiary-container">0.0412</td>
+<td class="py-space-sm px-space-md font-bold text-on-tertiary-container">0.0428</td>
+<td class="py-space-sm px-space-md font-bold text-on-tertiary-container">0.0415</td>
+<td class="py-space-sm px-space-md text-right font-bold text-on-tertiary-container">0.0418</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-on-tertiary-container text-white px-2 py-0.5 rounded font-bold">Converged</span></td>
+</tr>
+<!-- Row 50 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-semibold text-secondary">R-50</td>
+<td class="py-space-sm px-space-md">58.24 KB</td>
+<td class="py-space-sm px-space-md">291.20 KB</td>
+<td class="py-space-sm px-space-md">17.47 MB / Client</td>
+<td class="py-space-sm px-space-md">0.0410</td>
+<td class="py-space-sm px-space-md">0.0425</td>
+<td class="py-space-sm px-space-md">0.0414</td>
+<td class="py-space-sm px-space-md text-right">0.0417</td>
+<td class="py-space-sm px-space-md text-right"><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Final Stop</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Contextual Note -->
+<div class="mt-space-md pt-space-sm flex flex-col md:flex-row md:items-center justify-between text-on-surface-variant font-label-sm text-label-sm gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Each round exchanges 5 client gradients × 58.24 KB model float32 params. Chronological train/test split preserved across simulated nodes.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Seed 42: <strong class="text-on-surface">142.1 MB</strong></span>
+<span>Seed 108: <strong class="text-on-surface">146.4 MB</strong></span>
+<span>Seed 999: <strong class="text-on-surface">144.2 MB</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Research Artifacts Export Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="latex-modal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-xl shadow-xl p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">LaTeX Conference Table Generator</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleLatexModal(false)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Ready-to-paste LaTeX booktabs snippet comparing centralized baseline vs. FedAvg over Seeds 42, 108, and 999 for PS-003 reporting.
+      </p>
+<pre class="bg-surface-container p-space-md rounded-lg font-label-sm text-label-sm text-on-surface overflow-x-auto select-all leading-relaxed">\begin{table}[htbp]
+\centering
+\caption{Communication-Cost vs. Predictive Performance Trade-Off (PS-003)}
+\label{tab:fedtraffic_cost}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Architecture} &amp; \textbf{Bandwidth / Day} &amp; \textbf{MAE} &amp; \textbf{RMSE} &amp; \textbf{Byte Reduction} \\
+\midrule
+Centralized Raw Ingest &amp; 14.80 GB &amp; 0.0398 &amp; 0.0581 &amp; Baseline \\
+FedAvg (E=1, 5 Clients) &amp; 246.80 MB &amp; 0.0421 &amp; 0.0624 &amp; 98.33\% \\
+FedAvg (E=5, Recommended) &amp; \textbf{28.80 MB} &amp; \textbf{0.0418} &amp; \textbf{0.0619} &amp; \textbf{99.80\%} \\
+FedAvg (E=10, Non-IID Drift) &amp; 97.80 MB &amp; 0.0526 &amp; 0.0768 &amp; 99.33\% \\
+\bottomrule
+\end{tabular}
+\end{table}</pre>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium" id="copy-status">Click code block to select all</span>
+<button class="px-space-md py-space-sm bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm hover:opacity-90 flex items-center gap-1" onclick="copyLatexSnippet()">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy to Clipboard</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline JavaScript for Interactivity -->
+<script>
+  function toggleLatexModal(show) {
+    const modal = document.getElementById('latex-modal');
+    if (show) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function copyLatexSnippet() {
+    const snippet = `\\begin{table}[htbp]
+\\centering
+\\caption{Communication-Cost vs. Predictive Performance Trade-Off (PS-003)}
+\\label{tab:fedtraffic_cost}
+\\begin{tabular}{lcccc}
+\\toprule
+\\textbf{Architecture} & \\textbf{Bandwidth / Day} & \\textbf{MAE} & \\textbf{RMSE} & \\textbf{Byte Reduction} \\\\
+\\midrule
+Centralized Raw Ingest & 14.80 GB & 0.0398 & 0.0581 & Baseline \\\\
+FedAvg (E=1, 5 Clients) & 246.80 MB & 0.0421 & 0.0624 & 98.33\\% \\\\
+FedAvg (E=5, Recommended) & \\textbf{28.80 MB} & \\textbf{0.0418} & \\textbf{0.0619} & \\textbf{99.80\\%} \\\\
+FedAvg (E=10, Non-IID Drift) & 97.80 MB & 0.0526 & 0.0768 & 99.33\\% \\\\
+\\bottomrule
+\\end{tabular}
+\\end{table}`;
+    navigator.clipboard.writeText(snippet).then(() => {
+      const status = document.getElementById('copy-status');
+      status.textContent = 'Copied to clipboard!';
+      setTimeout(() => {
+        status.textContent = 'Click code block to select all';
+      }, 2500);
+    });
+  }
+
+  function exportCSVData() {
+    const csvContent = "data:text/csv;charset=utf-8," 
+      + "Round,Downlink_KB,Uplink_KB,Cumulative_MB,Seed_42_Loss,Seed_108_Loss,Seed_999_Loss,MAE,Status\\n"
+      + "1,58.24,291.20,0.35,0.3124,0.3201,0.3155,0.1840,Cold_Start\\n"
+      + "10,58.24,291.20,3.49,0.1450,0.1488,0.1462,0.0921,Training\\n"
+      + "25,58.24,291.20,8.73,0.0682,0.0714,0.0699,0.0543,Training\\n"
+      + "42,58.24,291.20,14.67,0.0435,0.0451,0.0440,0.0426,Near_Plateau\\n"
+      + "48,58.24,291.20,16.77,0.0412,0.0428,0.0415,0.0418,Converged\\n"
+      + "50,58.24,291.20,17.47,0.0410,0.0425,0.0414,0.0417,Complete\\n";
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "fedtraffic_ps003_comm_ledger.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  function switchSeedView(seed) {
+    const rows = document.querySelectorAll('#ledger-body tr');
+    rows.forEach(r => {
+      if (seed === '42') {
+        r.style.opacity = '1';
+        r.classList.add('bg-surface-container-low/20');
+      } else if (seed === '108') {
+        r.style.opacity = '1';
+        r.classList.add('bg-surface-container-low/20');
+      } else {
+        r.style.opacity = '1';
+        r.classList.remove('bg-surface-container-low/20');
+      }
+    });
+  }
+</script></main></div></body></html>

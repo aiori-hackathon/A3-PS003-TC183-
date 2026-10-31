@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#009668","surface-bright":"#f8f9ff","secondary-fixed-dim":"#93ccff","surface-container-lowest":"#ffffff","surface":"#f8f9ff","primary-fixed-dim":"#bec6e0","background":"#f8f9ff","error":"#ba1a1a","secondary-fixed":"#cce5ff","surface-container-low":"#eff4ff","on-error-container":"#93000a","on-secondary-container":"#00476e","tertiary-fixed-dim":"#4edea3","tertiary-container":"#002113","primary-container":"#131b2e","inverse-primary":"#bec6e0","outline":"#76777d","on-secondary-fixed-variant":"#004b73","surface-dim":"#cbdbf5","on-primary-fixed":"#131b2e","primary-fixed":"#dae2fd","on-tertiary":"#ffffff","secondary":"#006398","on-surface-variant":"#45464d","on-primary-fixed-variant":"#3f465c","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#005236","inverse-on-surface":"#eaf1ff","outline-variant":"#c6c6cd","tertiary-fixed":"#6ffbbe","on-error":"#ffffff","on-surface":"#0b1c30","secondary-container":"#5bb8fe","on-secondary-fixed":"#001d31","primary":"#000000","on-tertiary-fixed":"#002113","error-container":"#ffdad6","surface-tint":"#565e74","on-background":"#0b1c30","surface-container-high":"#dce9ff","on-primary-container":"#7c839b","tertiary":"#000000","on-secondary":"#ffffff","on-primary":"#ffffff","surface-variant":"#d3e4fe","surface-container-highest":"#d3e4fe","inverse-surface":"#213145"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin":"1rem","space-md":"0.75rem","space-lg":"1.25rem","gutter":"1rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem","space-xl":"2rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-lg":["JetBrains Mono"],"headline-xl":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["JetBrains Mono"],"headline-md":["Inter"]},"fontSize":{"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","fontWeight":"700"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","fontWeight":"700"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","fontWeight":"500"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg py-space-sm mb-space-sm flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Smart Cities Lab</span><span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-space-xs rounded">PS-003</span></div><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight mt-space-xs">FedTraffic AIORI-3</span><span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">FL Telemetry &amp; Network Evaluator</span></div><div class="px-space-md mb-space-sm"><div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">ACTIVE CLUSTER</span><span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>ONLINE</span></div><div class="flex items-center justify-between text-on-surface font-label-md text-label-md"><span>5 Virtual Intersections</span><span class="font-label-sm text-label-sm text-secondary font-semibold">IID / Non-IID</span></div></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="problem-and-overview" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">assignment</span>Problem &amp; Overview</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="federated-simulator" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">memory</span>Federated Simulator</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="centralized-vs-fedavg-benchmark" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">compare_arrows</span>Centralized vs FedAvg Benchmark</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="client-non-iid-telemetry" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">hub</span>Client Non-IID Telemetry</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="communication-and-convergence-analysis" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">query_stats</span>Communication &amp; Convergence</a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="deliverables-and-github-submission" href="#"><span class="material-symbols-outlined text-[18px] mr-space-sm">terminal</span>Deliverables &amp; GitHub Submission</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1"><span class="font-label-sm text-label-sm text-on-surface-variant">EDGE TELEMETRY STREAM</span><div class="flex justify-between items-center"><span class="font-label-md text-label-md font-semibold text-on-surface">148.42 MB</span><span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">Tx 12.4 KB/s</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1"><div class="bg-secondary h-full w-2/3"></div></div></div><div class="px-space-xs py-space-xs flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant"><span>Sync: Round #48/50</span><span>Loss: 0.0418</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-margin-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="material-symbols-outlined text-[16px] text-secondary">tag</span><span class="font-label-sm text-label-sm text-on-surface-variant">Seeds:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">42, 128, 256 Active</span></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Edge Nodes:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">5 Connected</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">swap_vert</span><span class="font-label-sm text-label-sm text-on-surface-variant">Network:</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">148.42 MB Transferred</span></div></div><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm transition-colors" href="https://github.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">code</span><span>GitHub Repo</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Academic Context Ribbon -->
+<div class="px-space-margin-desktop py-space-sm bg-surface-container-high flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">AIORI-3 • PS-003</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Federated Traffic-Flow Prediction &amp; Communication Overhead Engine</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Benchmark: PeMS04 Sensor Subsets (15-min Intervals)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-lowest px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span>EDGE CLUSTER FEDAVG LOOP ENGAGED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validation Split: 70/15/15 Chronological</span>
+</div>
+</div>
+<div class="p-space-margin-desktop space-y-space-lg">
+<!-- Row 1: Executive KPI Strip & Quick Actions -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Metric 1: Current Round -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Current Round</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">sync</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold" id="metric-round-val">34</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 100</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full transition-all duration-300" id="metric-round-bar" style="width: 34%;"></div>
+</div>
+</div>
+<div class="mt-2.5 pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Convergence Target: 80</span>
+<span class="text-on-tertiary-container font-medium">34% ETA: ~12m</span>
+</div>
+</div>
+<!-- Metric 2: Global MAE / RMSE -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">FedAvg MAE / RMSE</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">show_chart</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold" id="metric-mae-val">18.42</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">veh/h</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> 2.14% vs R33
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RMSE: 27.81</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Centralized Baseline: 17.65</span>
+<span class="text-secondary font-medium">Gap: +4.3%</span>
+</div>
+</div>
+<!-- Metric 3: Total Cellular Uplink Overhead -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cellular Comm Overhead</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">cell_tower</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold" id="metric-comm-val">204.0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MB</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">6.0 MB/round (5 clients @ 1.2MB delta)</p>
+</div>
+<div class="mt-2.5 pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Raw Streaming Eq: 4.82 GB</span>
+<span class="text-on-tertiary-container font-medium">95.7% Saved</span>
+</div>
+</div>
+<!-- Metric 4: Dirichlet Non-IID Skew Index -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Heterogeneity Index</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold" id="metric-alpha-val">α = 0.5</span>
+</div>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Moderate Spatial Skew</span>
+</div>
+<div class="mt-2.5 pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Earth Mover's Dist: 0.384</span>
+<span class="text-secondary font-medium">Active</span>
+</div>
+</div>
+<!-- Metric 5: Master Round Step Trigger -->
+<div class="bg-primary-container text-on-primary-container p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant">FL Execution State</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">satellite_alt</span>
+</div>
+<div class="my-2">
+<div class="font-headline-md text-headline-md text-on-primary font-bold">Round #34 Active</div>
+<p class="font-label-sm text-label-sm text-surface-variant mt-0.5">5 client deltas received &amp; aggregated</p>
+</div>
+<button class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary py-1.5 px-3 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors shadow" id="btn-fedavg-step">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Execute FedAvg Step</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Simulator Controller & Parameter Aggregator Console -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Simulation Controls Panel (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Federated Hyperparameters &amp; Controller</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">PS-003 Core</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Configure client nodes, synthetic heterogeneity partition, and seed replication parameters to test FedAvg convergence resiliency.</p>
+</div>
+<div class="space-y-4">
+<!-- Active Client Intersections (K) -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Participating Intersections (Clients K):</span>
+<span class="font-bold text-secondary font-mono" id="label-client-count">5 Clients (100% Cohort)</span>
+</div>
+<input class="w-full accent-secondary h-2 bg-surface-container rounded-lg cursor-pointer" id="slider-client-count" max="5" min="3" step="1" type="range" value="5"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>3 Nodes (Min)</span>
+<span>4 Nodes</span>
+<span>5 Nodes (Full PeMS Mesh)</span>
+</div>
+</div>
+<!-- Data Distribution Selector (IID vs Non-IID) -->
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">Traffic Split Heterogeneity:</span>
+<div class="grid grid-cols-3 gap-2">
+<button class="dist-btn py-2 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-dist="iid">
+<div class="font-semibold">IID Uniform</div>
+<div class="text-[10px] opacity-75">Shuffled Sensors</div>
+</button>
+<button class="dist-btn active-dist py-2 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all bg-secondary text-on-secondary shadow-sm" data-dist="dirichlet-05">
+<div class="font-semibold">Non-IID (α=0.5)</div>
+<div class="text-[10px] opacity-90">Realistic Skew</div>
+</button>
+<button class="dist-btn py-2 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-dist="dirichlet-01">
+<div class="font-semibold">Non-IID (α=0.1)</div>
+<div class="text-[10px] opacity-75">Extreme Peak Bias</div>
+</button>
+</div>
+</div>
+<!-- Random Seed Selector (Requirement: 3 seeds) -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Repetition Random Seed (3-Run Protocol):</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Torch.manual_seed</span>
+</div>
+<div class="flex gap-2">
+<button class="seed-btn flex-1 py-1.5 rounded-lg font-label-sm text-label-sm font-mono text-center transition-colors bg-secondary text-on-secondary font-semibold" data-seed="42">
+                Seed 42 (Nominal)
+              </button>
+<button class="seed-btn flex-1 py-1.5 rounded-lg font-label-sm text-label-sm font-mono text-center transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-seed="108">
+                Seed 108
+              </button>
+<button class="seed-btn flex-1 py-1.5 rounded-lg font-label-sm text-label-sm font-mono text-center transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-seed="999">
+                Seed 999
+              </button>
+</div>
+</div>
+<!-- Model Hyperparameter Indicators -->
+<div class="bg-surface p-space-sm rounded-lg grid grid-cols-3 gap-2 text-center font-label-sm text-label-sm">
+<div>
+<span class="text-on-surface-variant block">Architecture</span>
+<span class="font-semibold text-on-surface">GRU-Traffic (2-L)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Local Epochs (E)</span>
+<span class="font-semibold text-on-surface">E = 3 (AdamW)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Batch Size (B)</span>
+<span class="font-semibold text-on-surface">32 (Seq: 12)</span>
+</div>
+</div>
+</div>
+<!-- Simulation Transport Actions -->
+<div class="flex flex-wrap items-center gap-2 pt-2">
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors" id="btn-ff-10">
+<span class="material-symbols-outlined text-[18px]">fast_forward</span>
+<span>+10 Rounds</span>
+</button>
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors" id="btn-ff-50">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Fast to 100</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-error font-label-md text-label-md py-2 px-3 rounded-lg flex items-center justify-center gap-1 transition-colors" id="btn-reset">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Central Parameter Aggregator (FedAvg Server) (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">dns</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">FedAvg Parameter Server &amp; Weighted Consensus</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-tertiary-container bg-surface-container px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span>Aggregation Cycle Active</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Computes $w_{t+1} = \sum_{k=1}^K \frac{n_k}{N} w_{t+1}^k$. Aggregates uploaded weight tensors proportional to intersection sample volumes.</p>
+</div>
+<!-- Weighted Client Contribution Graph -->
+<div class="space-y-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold uppercase tracking-wider">Client Weight Allocation ($n_k / N$ Ratio):</span>
+<span class="text-on-surface-variant font-mono">Total Dataset: N = 43,200 sequences</span>
+</div>
+<!-- Multi-colored Proportional Weight Bar -->
+<div class="w-full h-7 rounded-lg overflow-hidden flex shadow-inner font-label-sm text-label-sm text-on-primary font-semibold">
+<div class="bg-primary flex items-center justify-center transition-all duration-500" id="bar-weight-a" style="width: 27%;" title="Node A: 27%">A: 27%</div>
+<div class="bg-secondary flex items-center justify-center transition-all duration-500" id="bar-weight-b" style="width: 23%;" title="Node B: 23%">B: 23%</div>
+<div class="bg-on-secondary-container flex items-center justify-center transition-all duration-500" id="bar-weight-c" style="width: 20%;" title="Node C: 20%">C: 20%</div>
+<div class="bg-surface-tint flex items-center justify-center transition-all duration-500" id="bar-weight-d" style="width: 17%;" title="Node D: 17%">D: 17%</div>
+<div class="bg-outline flex items-center justify-center transition-all duration-500" id="bar-weight-e" style="width: 13%;" title="Node E: 13%">E: 13%</div>
+</div>
+<div class="grid grid-cols-5 text-center font-label-sm text-label-sm text-on-surface-variant pt-1">
+<div><span class="inline-block w-2 h-2 rounded-full bg-primary mr-1"></span>Node A</div>
+<div><span class="inline-block w-2 h-2 rounded-full bg-secondary mr-1"></span>Node B</div>
+<div><span class="inline-block w-2 h-2 rounded-full bg-on-secondary-container mr-1"></span>Node C</div>
+<div><span class="inline-block w-2 h-2 rounded-full bg-surface-tint mr-1"></span>Node D</div>
+<div><span class="inline-block w-2 h-2 rounded-full bg-outline mr-1"></span>Node E</div>
+</div>
+</div>
+<!-- Server Telemetry Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-2">
+<div class="bg-surface p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Tensor Delta Size</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono font-bold">1.20 MB</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">314,880 Float32</span>
+</div>
+<div class="bg-surface p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Consensus Latency</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-mono font-bold" id="server-latency">1.84 s</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Sync + FedAvg reduction</span>
+</div>
+<div class="bg-surface p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Weight Divergence</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono font-bold" id="server-divergence">0.0382</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container block mt-0.5">Stable Gradient Bounds</span>
+</div>
+<div class="bg-surface p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Broadcast Status</span>
+<span class="font-headline-sm text-headline-sm text-on-tertiary-container font-mono font-bold">ROUND OK</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Global Weights Synced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: Spatial Topology Map & Edge Node Telemetry (5 Simulated Intersections) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">share_location</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Spatial Network Topology: 5 Virtual Road Intersections</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Decentralized sensor client nodes simulating distinct urban traffic flows with chronological validation sets</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant">Batch Size: 32</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant">AdamW lr=0.001</span>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">Uplink: Cellular LTE/5G</span>
+</div>
+</div>
+<!-- 5 Node Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md" id="nodes-container">
+<!-- Node A -->
+<div class="bg-surface-container-low p-space-md rounded-xl transition-all duration-300" id="node-card-a">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Node A</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">ID: INT-01</span>
+</div>
+<div class="text-on-surface font-headline-sm text-headline-sm font-semibold truncate" title="Downtown Arterial">Downtown Arterial</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-3">Peak Commuter Corridor (High Volume)</div>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>Local Samples:</span>
+<span class="font-mono font-semibold text-on-surface">11,664 seqs</span>
+</div>
+<div class="flex justify-between">
+<span>Current Epoch:</span>
+<span class="font-mono text-on-surface">E=3/3 completed</span>
+</div>
+<div class="flex justify-between">
+<span>Local Loss (MSE):</span>
+<span class="font-mono font-bold text-secondary" id="loss-node-a">0.0381</span>
+</div>
+<div class="flex justify-between">
+<span>Upload Payload:</span>
+<span class="font-mono text-on-surface">1.2 MB / round</span>
+</div>
+<div class="flex justify-between">
+<span>Uplink Latency:</span>
+<span class="font-mono text-on-tertiary-container font-semibold">142 ms (4G)</span>
+</div>
+</div>
+</div>
+<!-- Node B -->
+<div class="bg-surface-container-low p-space-md rounded-xl transition-all duration-300" id="node-card-b">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Node B</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">ID: INT-02</span>
+</div>
+<div class="text-on-surface font-headline-sm text-headline-sm font-semibold truncate" title="Expressway Ramp 4A">Expressway Ramp 4A</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-3">High Velocity Inflow (Intermittent)</div>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>Local Samples:</span>
+<span class="font-mono font-semibold text-on-surface">9,936 seqs</span>
+</div>
+<div class="flex justify-between">
+<span>Current Epoch:</span>
+<span class="font-mono text-on-surface">E=3/3 completed</span>
+</div>
+<div class="flex justify-between">
+<span>Local Loss (MSE):</span>
+<span class="font-mono font-bold text-secondary" id="loss-node-b">0.0412</span>
+</div>
+<div class="flex justify-between">
+<span>Upload Payload:</span>
+<span class="font-mono text-on-surface">1.2 MB / round</span>
+</div>
+<div class="flex justify-between">
+<span>Uplink Latency:</span>
+<span class="font-mono text-on-tertiary-container font-semibold">98 ms (5G)</span>
+</div>
+</div>
+</div>
+<!-- Node C -->
+<div class="bg-surface-container-low p-space-md rounded-xl transition-all duration-300" id="node-card-c">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Node C</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">ID: INT-03</span>
+</div>
+<div class="text-on-surface font-headline-sm text-headline-sm font-semibold truncate" title="Commercial Center">Commercial Center</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-3">Shopping &amp; Logistics Hub (Midday Peak)</div>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>Local Samples:</span>
+<span class="font-mono font-semibold text-on-surface">8,640 seqs</span>
+</div>
+<div class="flex justify-between">
+<span>Current Epoch:</span>
+<span class="font-mono text-on-surface">E=3/3 completed</span>
+</div>
+<div class="flex justify-between">
+<span>Local Loss (MSE):</span>
+<span class="font-mono font-bold text-secondary" id="loss-node-c">0.0449</span>
+</div>
+<div class="flex justify-between">
+<span>Upload Payload:</span>
+<span class="font-mono text-on-surface">1.2 MB / round</span>
+</div>
+<div class="flex justify-between">
+<span>Uplink Latency:</span>
+<span class="font-mono text-on-tertiary-container font-semibold">185 ms (4G)</span>
+</div>
+</div>
+</div>
+<!-- Node D -->
+<div class="bg-surface-container-low p-space-md rounded-xl transition-all duration-300" id="node-card-d">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Node D</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">ID: INT-04</span>
+</div>
+<div class="text-on-surface font-headline-sm text-headline-sm font-semibold truncate" title="Suburban Corridor">Suburban Corridor</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-3">Residential Morning Rush / Evening Low</div>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>Local Samples:</span>
+<span class="font-mono font-semibold text-on-surface">7,344 seqs</span>
+</div>
+<div class="flex justify-between">
+<span>Current Epoch:</span>
+<span class="font-mono text-on-surface">E=3/3 completed</span>
+</div>
+<div class="flex justify-between">
+<span>Local Loss (MSE):</span>
+<span class="font-mono font-bold text-secondary" id="loss-node-d">0.0468</span>
+</div>
+<div class="flex justify-between">
+<span>Upload Payload:</span>
+<span class="font-mono text-on-surface">1.2 MB / round</span>
+</div>
+<div class="flex justify-between">
+<span>Uplink Latency:</span>
+<span class="font-mono text-on-tertiary-container font-semibold">210 ms (LTE)</span>
+</div>
+</div>
+</div>
+<!-- Node E -->
+<div class="bg-surface-container-low p-space-md rounded-xl transition-all duration-300" id="node-card-e">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Node E</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container rounded text-on-surface-variant font-mono">ID: INT-05</span>
+</div>
+<div class="text-on-surface font-headline-sm text-headline-sm font-semibold truncate" title="University Junction">University Junction</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-3">High Pedestrian &amp; Transit Inflow</div>
+<div class="space-y-1.5 font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="flex justify-between">
+<span>Local Samples:</span>
+<span class="font-mono font-semibold text-on-surface">5,616 seqs</span>
+</div>
+<div class="flex justify-between">
+<span>Current Epoch:</span>
+<span class="font-mono text-on-surface">E=3/3 completed</span>
+</div>
+<div class="flex justify-between">
+<span>Local Loss (MSE):</span>
+<span class="font-mono font-bold text-secondary" id="loss-node-e">0.0491</span>
+</div>
+<div class="flex justify-between">
+<span>Upload Payload:</span>
+<span class="font-mono text-on-surface">1.2 MB / round</span>
+</div>
+<div class="flex justify-between">
+<span>Uplink Latency:</span>
+<span class="font-mono text-on-tertiary-container font-semibold">120 ms (5G)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 4: Dual Visual Analytics (Convergence & Live Traffic Forecast vs Ground Truth) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Convergence Curve: Centralized vs FedAvg (IID vs Non-IID) (6 Columns) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Convergence Trajectory: Centralized vs FedAvg</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-mono">100 Rounds</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validation MAE (veh/h) tracked chronologically. Highlights FedAvg penalty under non-IID data versus centralized pooled model.</p>
+</div>
+<!-- SVG Line Chart for Convergence -->
+<div class="my-4 relative bg-surface-container-low/50 rounded-lg p-3">
+<svg aria-label="Convergence plot" class="w-full h-56" viewbox="0 0 540 220">
+<!-- Grid lines -->
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="45" x2="520" y1="20" y2="20"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="45" x2="520" y1="70" y2="70"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="45" x2="520" y1="120" y2="120"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="45" x2="520" y1="170" y2="170"></line>
+<line class="text-outline-variant" opacity="0.7" stroke="currentColor" x1="45" x2="520" y1="195" y2="195"></line>
+<!-- Y Axis Labels -->
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="35" y="24">40 MAE</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="35" y="74">30 MAE</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="35" y="124">20 MAE</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="35" y="174">10 MAE</text>
+<!-- Curves -->
+<!-- Curve 1: Centralized Benchmark (Dashed line) -->
+<path class="text-primary" d="M 45 185 C 90 120, 160 90, 240 75 S 400 68, 520 65" fill="none" stroke="currentColor" stroke-dasharray="4,4" stroke-width="2"></path>
+<!-- Curve 2: FedAvg IID (Green line) -->
+<path class="text-on-tertiary-container" d="M 45 190 C 100 135, 180 98, 260 84 S 410 74, 520 71" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<!-- Curve 3: FedAvg Non-IID alpha=0.5 (Active - Blue) -->
+<path class="text-secondary" d="M 45 195 C 105 155, 175 116, 250 96 S 420 86, 520 81" fill="none" id="curve-non-iid" stroke="currentColor" stroke-width="3"></path>
+<!-- Current round cursor -->
+<line class="text-error" id="cursor-round-x" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1.5" x1="206" x2="206" y1="20" y2="195"></line>
+<circle class="text-secondary" cx="206" cy="107" fill="currentColor" id="cursor-round-dot" r="4.5"></circle>
+<!-- Legend inside chart -->
+<g transform="translate(260, 28)">
+<rect class="fill-surface-container-lowest" height="24" opacity="0.9" rx="4" width="250"></rect>
+<line class="text-primary" stroke="currentColor" stroke-dasharray="3,3" stroke-width="2" x1="10" x2="26" y1="12" y2="12"></line>
+<text class="fill-current text-on-surface font-label-sm text-[10px]" x="32" y="16">Centralized (17.65)</text>
+<line class="text-secondary" stroke="currentColor" stroke-width="2.5" x1="120" x2="136" y1="12" y2="12"></line>
+<text class="fill-current text-on-surface font-label-sm text-[10px]" x="142" y="16">FedAvg (18.42)</text>
+</g>
+<!-- X Axis Round ticks -->
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="45" y="210">R: 1</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="160" y="210">R: 25</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="280" y="210">R: 50</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="400" y="210">R: 75</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="510" y="210">R: 100</text>
+</svg>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span>Communication Efficiency: FedAvg reduces byte footprint by <strong>23.6x</strong></span>
+<span class="text-secondary font-mono">Seed: 42 (Nominal)</span>
+</div>
+</div>
+<!-- Live Traffic Flow Curve: Ground Truth vs Federated Prediction (6 Columns) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">timeline</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">24-Hour Horizon Traffic Flow Prediction</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-on-surface rounded font-mono">Node A: Downtown Arterial</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ground Truth vs FedAvg 15-minute ahead forecast. Shaded area denotes ±1.96σ confidence bounds.</p>
+</div>
+<!-- SVG Traffic Curve Display -->
+<div class="my-4 relative bg-surface-container-low/50 rounded-lg p-3">
+<svg aria-label="Traffic forecasting curve" class="w-full h-56" viewbox="0 0 540 220">
+<!-- Grid lines -->
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="40" x2="525" y1="20" y2="20"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="40" x2="525" y1="70" y2="70"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="40" x2="525" y1="120" y2="120"></line>
+<line class="text-outline-variant" opacity="0.3" stroke="currentColor" stroke-dasharray="3,3" x1="40" x2="525" y1="170" y2="170"></line>
+<line class="text-outline-variant" opacity="0.7" stroke="currentColor" x1="40" x2="525" y1="195" y2="195"></line>
+<!-- Y Axis Veh/Hr -->
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="32" y="24">800</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="32" y="74">600</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="32" y="124">400</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" text-anchor="end" x="32" y="174">200</text>
+<!-- Confidence Interval Ribbon (Area) -->
+<path class="fill-secondary/15" d="M 40 180 C 80 185, 120 150, 160 110 S 240 45, 280 48 S 360 130, 400 80 S 480 90, 525 170 L 525 190 C 480 110, 400 100, 360 150 S 280 68, 240 65 S 160 130, 120 170 S 80 195, 40 195 Z"></path>
+<!-- Ground Truth Path (Solid Slate) -->
+<path class="text-on-surface-variant" d="M 40 185 C 80 190, 120 160, 160 120 S 240 50, 280 55 S 360 140, 400 90 S 480 100, 525 180" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<!-- FedAvg Prediction Path (Vibrant Sky/Secondary) -->
+<path class="text-secondary" d="M 40 184 C 80 187, 120 158, 160 123 S 240 54, 280 58 S 360 136, 400 93 S 480 103, 525 178" fill="none" id="forecast-pred-path" stroke="currentColor" stroke-dasharray="2,0" stroke-width="2.5"></path>
+<!-- Peak Marker Highlight -->
+<circle class="text-error" cx="280" cy="55" fill="currentColor" r="4"></circle>
+<text class="fill-current text-on-surface font-label-sm text-[10px] font-bold" text-anchor="middle" x="280" y="42">Morning Rush: 742 v/h</text>
+<!-- Legend Overlay -->
+<g transform="translate(42, 28)">
+<rect class="fill-surface-container-lowest" height="24" opacity="0.9" rx="4" width="260"></rect>
+<line class="text-on-surface-variant" stroke="currentColor" stroke-width="2.5" x1="8" x2="24" y1="12" y2="12"></line>
+<text class="fill-current text-on-surface font-label-sm text-[10px]" x="30" y="16">Ground Truth (PeMS-04)</text>
+<line class="text-secondary" stroke="currentColor" stroke-width="2.5" x1="145" x2="161" y1="12" y2="12"></line>
+<text class="fill-current text-secondary font-label-sm text-[10px] font-semibold" x="167" y="16">FedAvg Pred</text>
+</g>
+<!-- X Axis Time labels -->
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="40" y="210">00:00</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="160" y="210">06:00</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="280" y="210">12:00</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="400" y="210">18:00</text>
+<text class="fill-current text-on-surface-variant font-label-sm text-[10px]" x="500" y="210">23:55</text>
+</svg>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span>95% Confidence Interval Coverage: <strong>94.2%</strong></span>
+<span class="text-on-tertiary-container font-semibold">MAE Residual: 1.48 veh/h</span>
+</div>
+</div>
+</div>
+<!-- Row 5: Telemetry Event Stream & Academic Requirements Audit -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Live Step Telemetry Stream (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">terminal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Edge Gradient &amp; Cellular Telemetry Stream</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm underline" id="btn-clear-logs">Clear Stream</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time chronologically sorted local forward passes, backpropagation, model delta serialization, and FedAvg reduction steps.</p>
+</div>
+<!-- Terminal Log Box -->
+<div class="my-3 bg-surface-container-highest text-on-surface font-mono font-label-sm text-label-sm p-space-sm rounded-lg h-56 overflow-y-auto space-y-1.5 shadow-inner" id="telemetry-terminal">
+<div class="text-on-surface-variant">[14:32:01.012] <span class="text-secondary">[ROUND-34]</span> Server broadcast global weights W_34 (314.880 floats, 1.2 MB) to 5 nodes.</div>
+<div class="text-on-surface-variant">[14:32:01.154] <span class="text-on-tertiary-container">[NODE-A]</span> INT-01: Received W_34 in 142ms. Initialized local GRU state.</div>
+<div class="text-on-surface-variant">[14:32:01.489] <span class="text-on-tertiary-container">[NODE-B]</span> INT-02: Executed 3 local epochs over 9,936 seqs. MSE reduced 0.0428 -&gt; 0.0412.</div>
+<div class="text-on-surface-variant">[14:32:01.782] <span class="text-on-tertiary-container">[NODE-E]</span> INT-05: Delta serialised. Cellular upload initiated (1.20 MB payload).</div>
+<div class="text-on-surface-variant">[14:32:02.110] <span class="text-primary font-semibold">[SERVER]</span> Quorum reached (5/5 updates received). Executing FedAvg scalar weighting.</div>
+<div class="text-on-tertiary-container font-semibold">[14:32:02.320] [FEDAVG-OK] Global aggregation round 34 committed. Evaluated MAE=18.42 veh/h.</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>Socket: wss://edge.traffic.aiori3/federated/stream</span>
+<span>Buffer: 128 events cached</span>
+</div>
+</div>
+<!-- Problem Statement (PS-003) Validation & Deliverables Checklist (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PS-003 Challenge Compliance Audit</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">100% Validated</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strict compliance tracker against the AIORI-3 Smart Cities Problem Statement specifications.</p>
+</div>
+<!-- Requirements List -->
+<div class="my-3 space-y-2.5 font-label-sm text-label-sm">
+<div class="flex items-start gap-2 bg-surface p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface block">Public Dataset Split (3-5 Clients)</span>
+<span class="text-on-surface-variant">PeMS traffic flow partitions split across 5 edge intersection nodes.</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface block">FedAvg + Compact Forecasting Model</span>
+<span class="text-on-surface-variant">Compact 2-Layer GRU forecaster with weighted FedAvg gradient reduction.</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface block">Chronological Split (Zero Data Leakage)</span>
+<span class="text-on-surface-variant">Strict sliding window train/val/test splits preventing future-token contamination.</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface block">IID vs Non-IID Dirichlet Comparison</span>
+<span class="text-on-surface-variant">Parametric evaluation across Dirichlet α=0.5 and α=0.1 skew profiles.</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface block">Communication Byte Cost &amp; 3 Seed Triangulation</span>
+<span class="text-on-surface-variant">Total bytes calculated (204.0 MB) evaluated against Seeds 42, 108, and 999.</span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Repository: aiori-hackathon</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Private Git Bound
+          </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    let currentRound = 34;
+    let maxRounds = 100;
+    let currentClients = 5;
+    let currentAlpha = 0.5;
+    let currentSeed = 42;
+    let baseCommBytes = 6.0; // MB per round with 5 clients
+
+    const roundValEl = document.getElementById('metric-round-val');
+    const roundBarEl = document.getElementById('metric-round-bar');
+    const maeValEl = document.getElementById('metric-mae-val');
+    const commValEl = document.getElementById('metric-comm-val');
+    const cursorRoundX = document.getElementById('cursor-round-x');
+    const cursorRoundDot = document.getElementById('cursor-round-dot');
+    const terminalEl = document.getElementById('telemetry-terminal');
+    const sliderClients = document.getElementById('slider-client-count');
+    const labelClients = document.getElementById('label-client-count');
+    const distBtns = document.querySelectorAll('.dist-btn');
+    const seedBtns = document.querySelectorAll('.seed-btn');
+    const btnStep = document.getElementById('btn-fedavg-step');
+    const btnFf10 = document.getElementById('btn-ff-10');
+    const btnFf50 = document.getElementById('btn-ff-50');
+    const btnReset = document.getElementById('btn-reset');
+    const btnClearLogs = document.getElementById('btn-clear-logs');
+
+    function appendLog(text, highlightType = 'normal') {
+      const now = new Date();
+      const timeStr = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
+      const div = document.createElement('div');
+      
+      if (highlightType === 'success') {
+        div.className = 'text-on-tertiary-container font-semibold';
+        div.innerHTML = `[${timeStr}] ${text}`;
+      } else if (highlightType === 'accent') {
+        div.className = 'text-on-surface-variant';
+        div.innerHTML = `[${timeStr}] <span class="text-secondary">${text}</span>`;
+      } else {
+        div.className = 'text-on-surface-variant';
+        div.innerHTML = `[${timeStr}] ${text}`;
+      }
+      
+      terminalEl.appendChild(div);
+      terminalEl.scrollTop = terminalEl.scrollHeight;
+    }
+
+    function computeMetrics(r) {
+      // Synthetic mathematically sound convergence formula
+      // Centralized limit ~ 17.65
+      // Non-IID penalty varies with alpha
+      const alphaPenalty = currentAlpha === 0.1 ? 2.4 : (currentAlpha === 0.5 ? 0.8 : 0.2);
+      const seedJitter = (Math.sin(currentSeed + r) * 0.12);
+      const mae = (17.65 + alphaPenalty + 14 * Math.exp(-r / 18) + seedJitter).toFixed(2);
+      const totalMB = ((r * (currentClients * 1.2))).toFixed(1);
+      return { mae, totalMB };
+    }
+
+    function renderState() {
+      roundValEl.textContent = currentRound;
+      roundBarEl.style.width = `${Math.min(100, (currentRound / maxRounds) * 100)}%`;
+
+      const { mae, totalMB } = computeMetrics(currentRound);
+      maeValEl.textContent = mae;
+      commValEl.textContent = totalMB;
+
+      // Update Cursor position in convergence plot (45px to 520px)
+      const xPos = 45 + ((currentRound - 1) / (maxRounds - 1)) * (520 - 45);
+      cursorRoundX.setAttribute('x1', xPos);
+      cursorRoundX.setAttribute('x2', xPos);
+      cursorRoundDot.setAttribute('cx', xPos);
+
+      // Y pos approximate mapping for non-IID curve
+      const yPos = 195 - (195 - 81) * (1 - Math.exp(-currentRound / 24));
+      cursorRoundDot.setAttribute('cy', yPos);
+
+      // Random jitter for client losses
+      const lossNodes = ['loss-node-a', 'loss-node-b', 'loss-node-c', 'loss-node-d', 'loss-node-e'];
+      lossNodes.forEach((id, idx) => {
+        const el = document.getElementById(id);
+        if (el) {
+          const l = (0.035 + (idx * 0.003) + 0.04 * Math.exp(-currentRound / 15) + (Math.random() * 0.002)).toFixed(4);
+          el.textContent = l;
+        }
+      });
+    }
+
+    function stepRound(n = 1) {
+      if (currentRound + n > maxRounds) {
+        currentRound = maxRounds;
+      } else {
+        currentRound += n;
+      }
+
+      appendLog(`[SERVER-BROADCAST] Round #${currentRound} weight parameter broadcast initiated (${currentClients} clients participating).`, 'accent');
+      appendLog(`[GRADIENT-REDUCE] Aggregated local tensor weight models across ${currentClients} intersections using FedAvg scalar proportions.`);
+      
+      const { mae } = computeMetrics(currentRound);
+      appendLog(`[FEDAVG-OK] Global round #${currentRound} finalized. Global Test MAE = ${mae} veh/h.`, 'success');
+      
+      renderState();
+    }
+
+    // Client slider change
+    sliderClients.addEventListener('input', (e) => {
+      currentClients = parseInt(e.target.value, 10);
+      labelClients.textContent = `${currentClients} Clients (${Math.round((currentClients / 5) * 100)}% Cohort)`;
+      
+      // Update visibility/opacity of client cards
+      const nodeCards = ['node-card-a', 'node-card-b', 'node-card-c', 'node-card-d', 'node-card-e'];
+      nodeCards.forEach((cardId, index) => {
+        const card = document.getElementById(cardId);
+        if (index < currentClients) {
+          card.classList.remove('opacity-30', 'grayscale');
+        } else {
+          card.classList.add('opacity-30', 'grayscale');
+        }
+      });
+
+      appendLog(`[TOPOLOGY-UPDATE] Active simulated intersection clients reconfigured to K=${currentClients}.`);
+      renderState();
+    });
+
+    // Distribution buttons
+    distBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        distBtns.forEach(b => {
+          b.classList.remove('bg-secondary', 'text-on-secondary', 'shadow-sm');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-secondary', 'text-on-secondary', 'shadow-sm');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        const dist = btn.getAttribute('data-dist');
+        const alphaEl = document.getElementById('metric-alpha-val');
+        if (dist === 'iid') {
+          currentAlpha = 100.0;
+          alphaEl.textContent = 'IID (Uniform)';
+          appendLog(`[DISTRIBUTION-MODE] Partition set to IID Uniform (Shuffle split). Earth Mover's Distance -> 0.04.`);
+        } else if (dist === 'dirichlet-05') {
+          currentAlpha = 0.5;
+          alphaEl.textContent = 'α = 0.5';
+          appendLog(`[DISTRIBUTION-MODE] Partition recomputed using Dirichlet Dirichlet(α=0.5). Realistic suburban/downtown skew applied.`);
+        } else if (dist === 'dirichlet-01') {
+          currentAlpha = 0.1;
+          alphaEl.textContent = 'α = 0.1';
+          appendLog(`[DISTRIBUTION-MODE] Severe Non-IID Dirichlet(α=0.1) configured. High client drift penalty anticipated.`);
+        }
+        renderState();
+      });
+    });
+
+    // Seed buttons
+    seedBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        seedBtns.forEach(b => {
+          b.classList.remove('bg-secondary', 'text-on-secondary', 'font-semibold');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-secondary', 'text-on-secondary', 'font-semibold');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        currentSeed = parseInt(btn.getAttribute('data-seed'), 10);
+        appendLog(`[RNG-SEED] PRNG Seed shifted to ${currentSeed}. Resetting stochastic client mini-batch shuffle orders.`);
+        renderState();
+      });
+    });
+
+    // Controller actions
+    btnStep.addEventListener('click', () => stepRound(1));
+    btnFf10.addEventListener('click', () => stepRound(10));
+    btnFf50.addEventListener('click', () => {
+      currentRound = 100;
+      appendLog(`[FAST-FORWARD] Evaluated entire 100-round trajectory under current partition and seed ${currentSeed}.`, 'success');
+      renderState();
+    });
+
+    btnReset.addEventListener('click', () => {
+      currentRound = 1;
+      appendLog(`[RESET] Simulator restored to Round #1 initial state. Global model initialized with He-normal weights.`);
+      renderState();
+    });
+
+    btnClearLogs.addEventListener('click', () => {
+      terminalEl.innerHTML = '';
+      appendLog(`[STREAM-CLEARED] Logging terminal buffer emptied.`);
+    });
+
+    // Initial render
+    renderState();
+  })();
+</script></main></div></body></html>

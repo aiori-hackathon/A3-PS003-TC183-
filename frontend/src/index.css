@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-tertiary-container: #009668;
+  --color-surface-bright: #f8f9ff;
+  --color-secondary-fixed-dim: #93ccff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface: #f8f9ff;
+  --color-primary-fixed-dim: #bec6e0;
+  --color-background: #f8f9ff;
+  --color-error: #ba1a1a;
+  --color-secondary-fixed: #cce5ff;
+  --color-surface-container-low: #eff4ff;
+  --color-on-error-container: #93000a;
+  --color-on-secondary-container: #00476e;
+  --color-tertiary-fixed-dim: #4edea3;
+  --color-tertiary-container: #002113;
+  --color-primary-container: #131b2e;
+  --color-inverse-primary: #bec6e0;
+  --color-outline: #76777d;
+  --color-on-secondary-fixed-variant: #004b73;
+  --color-surface-dim: #cbdbf5;
+  --color-on-primary-fixed: #131b2e;
+  --color-primary-fixed: #dae2fd;
+  --color-on-tertiary: #ffffff;
+  --color-secondary: #006398;
+  --color-on-surface-variant: #45464d;
+  --color-on-primary-fixed-variant: #3f465c;
+  --color-surface-container: #e5eeff;
+  --color-on-tertiary-fixed-variant: #005236;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-outline-variant: #c6c6cd;
+  --color-tertiary-fixed: #6ffbbe;
+  --color-on-error: #ffffff;
+  --color-on-surface: #0b1c30;
+  --color-secondary-container: #5bb8fe;
+  --color-on-secondary-fixed: #001d31;
+  --color-primary: #000000;
+  --color-on-tertiary-fixed: #002113;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #565e74;
+  --color-on-background: #0b1c30;
+  --color-surface-container-high: #dce9ff;
+  --color-on-primary-container: #7c839b;
+  --color-tertiary: #000000;
+  --color-on-secondary: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-surface-variant: #d3e4fe;
+  --color-surface-container-highest: #d3e4fe;
+  --color-inverse-surface: #213145;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 0.75rem;
+  --spacing-space-lg: 1.25rem;
+  --spacing-space-xl: 2rem;
+  --spacing-margin: 1rem;
+  --spacing-margin-desktop: 2rem;
+  --spacing-space-margin-desktop: 2rem;
+  --spacing-gutter: 1rem;
+  --spacing-gutter-desktop: 1.5rem;
+  --spacing-space-gutter-desktop: 1.5rem;
+
+  --font-headline-xl: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-headline-sm: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-label-lg: "JetBrains Mono", monospace;
+  --font-label-md: "JetBrains Mono", monospace;
+  --font-label-sm: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+/* Material Symbols Outlined helper */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Specific Typography Classes from User Config */
+.font-headline-xl { font-family: 'Inter', sans-serif; }
+.font-headline-lg { font-family: 'Inter', sans-serif; }
+.font-headline-md { font-family: 'Inter', sans-serif; }
+.font-headline-sm { font-family: 'Inter', sans-serif; }
+.font-body-lg { font-family: 'Inter', sans-serif; }
+.font-body-md { font-family: 'Inter', sans-serif; }
+.font-body-sm { font-family: 'Inter', sans-serif; }
+.font-label-lg { font-family: 'JetBrains Mono', monospace; }
+.font-label-md { font-family: 'JetBrains Mono', monospace; }
+.font-label-sm { font-family: 'JetBrains Mono', monospace; }
+
+.text-headline-xl { font-size: 2rem; line-height: 2.5rem; font-weight: 700; }
+.text-headline-lg { font-size: 1.5rem; line-height: 2rem; font-weight: 600; }
+.text-headline-md { font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; }
+.text-headline-sm { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
+.text-body-lg { font-size: 1rem; line-height: 1.625rem; font-weight: 400; }
+.text-body-md { font-size: 0.875rem; line-height: 1.375rem; font-weight: 400; }
+.text-body-sm { font-size: 0.75rem; line-height: 1.125rem; font-weight: 400; }
+.text-label-lg { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
+.text-label-md { font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
+.text-label-sm { font-size: 0.6875rem; line-height: 0.875rem; font-weight: 400; }
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c6c6cd;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #76777d;
+}

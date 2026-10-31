@@ -1,0 +1,6 @@
+{
+  "name": "FedTraffic AIORI-3 | FL Telemetry & Network Evaluator",
+  "description": "Federated Traffic-Flow Prediction with Communication-Cost Evaluation for Bandwidth-Constrained Roadside Infrastructure (PS-003).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
