@@ -35,13 +35,18 @@ async def lifespan(app: FastAPI):
     state["jobs"] = JobManager(db)
     # Demo mode: on an empty database, queue the evaluation suite so a fresh deployment shows real results.
     if os.environ.get("FEDTRAFFIC_SEED_DEMO", "").lower() in ("1", "true", "yes") and not db.list_experiments(limit=1):
-        base = ExperimentConfig(dataset_id="pems04" if datasets.availability(datasets.SPECS["pems04"])[0] else "synthetic",
-                                partition="dirichlet", alpha=0.5, rounds=20, seed=42)
-        suite_id = uuid.uuid4().hex[:8]
-        for label, cfg in preset_configs(base).items():
-            if label in ("CENTRAL", "A", "B", "C", "C2", "D"):
-                state["jobs"].submit(cfg, suite_id=suite_id, suite_label=label)
-        print(f"[fedtraffic] demo mode: queued evaluation suite {suite_id}")
+        try:  # never let demo seeding stop the server from starting
+            ds_id = "pems04" if datasets.availability(datasets.SPECS["pems04"])[0] else "synthetic"
+            n_sensors = min(50, datasets.load_dataset(ds_id).num_sensors)
+            base = ExperimentConfig(dataset_id=ds_id, num_sensors=n_sensors, partition="dirichlet", alpha=0.5,
+                                    rounds=int(os.environ.get("FEDTRAFFIC_DEMO_ROUNDS", "20")), seed=42)
+            suite_id = uuid.uuid4().hex[:8]
+            for label, cfg in preset_configs(base).items():
+                if label in ("CENTRAL", "A", "B", "C", "C2", "D"):
+                    state["jobs"].submit(cfg, suite_id=suite_id, suite_label=label)
+            print(f"[fedtraffic] demo mode: queued evaluation suite {suite_id} on {ds_id}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[fedtraffic] demo mode skipped: {type(e).__name__}: {e}")
     yield
 
 

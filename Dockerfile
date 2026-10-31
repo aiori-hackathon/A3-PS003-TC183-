@@ -26,10 +26,10 @@ WORKDIR /app/backend
 RUN pip install --index-url https://download.pytorch.org/whl/cpu torch \
     && pip install "fastapi>=0.110" "uvicorn[standard]>=0.29" "pydantic>=2.6" "numpy>=1.26" "pandas>=2.1"
 
-# Dataset baked into the image (PeMS04, ~32 MB). If the download fails the
-# app still runs with the synthetic dataset only.
+# Dataset baked into the image (PeMS04, ~32 MB). The build fails if it cannot be
+# downloaded, so a deployment never silently runs without the real data.
 COPY backend/download_data.sh ./
-RUN bash download_data.sh || echo "PeMS04 download failed; synthetic dataset only"
+RUN bash download_data.sh
 
 COPY backend/app ./app
 COPY --from=frontend /build/dist /app/frontend/dist

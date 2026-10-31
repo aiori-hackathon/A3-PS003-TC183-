@@ -1,0 +1,31 @@
+# Render Blueprint: Dashboard → New → Blueprint → select this repo.
+# One Docker web service serves both the API (/api/*) and the dashboard.
+services:
+  - type: web
+    name: fedtraffic
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    # Real PyTorch training needs ~1 GB+ RAM; the free plan (512 MB) is too small.
+    plan: standard
+    region: oregon
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: FEDTRAFFIC_SEED_DEMO
+        value: "1"
+      - key: FEDTRAFFIC_DEMO_ROUNDS
+        value: "20"
+      - key: FEDTRAFFIC_TORCH_THREADS
+        value: "1"
+      - key: FEDTRAFFIC_MAX_PENDING
+        value: "30"
+      - key: FEDTRAFFIC_CORS_ORIGINS
+        value: "*"
+    # Optional: keep experiment history across deploys (paid plans). Uncomment both parts.
+    # disk:
+    #   name: fedtraffic-state
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    #  - key: FEDTRAFFIC_DB_PATH
+    #    value: /var/data/fedtraffic.db

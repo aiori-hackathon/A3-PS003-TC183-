@@ -46,6 +46,19 @@ Then open the dashboard and either press **Run** on *Federated Simulator*, or go
 
 Single-server mode: `cd frontend && npm run build`, then `./backend/run.sh` also serves the built dashboard from `frontend/dist/` at http://127.0.0.1:8000.
 
+## Deploy on Render
+
+The repo contains a `Dockerfile` (builds the dashboard, bundles PeMS04, serves everything from one URL) and a `render.yaml` Blueprint.
+
+1. Render Dashboard → **New → Blueprint** → pick this GitHub repo → **Apply**. Render builds the Dockerfile (~5–10 min).
+2. Open `https://<service>.onrender.com`. With `FEDTRAFFIC_SEED_DEMO=1` the evaluation suite runs on first start (~3 min), so results appear without clicking anything.
+
+Manual alternative: **New → Web Service** → this repo → Runtime **Docker** → Health check path `/api/health` → add the variables from [`backend/.env.example`](backend/.env.example).
+
+- **Plan:** use **Standard (2 GB)** or larger. Tested with 1 CPU: peak memory 838 MB; the 512 MB Free/Starter plans run out of memory during training.
+- **History:** Render's filesystem resets on each deploy/restart. To keep experiments, attach a disk at `/var/data` and set `FEDTRAFFIC_DB_PATH=/var/data/fedtraffic.db`.
+- **No secrets** are needed. All backend settings are listed in [`backend/.env.example`](backend/.env.example).
+
 ## Pages
 
 | Page | Shows |
