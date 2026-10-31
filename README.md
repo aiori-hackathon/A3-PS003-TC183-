@@ -117,3 +117,6 @@ cd backend && .venv/bin/python -m pytest -q
 
 Clients are simulated in one process. The forecaster is per-sensor (no spatial graph). Keeping data local is not a formal privacy guarantee (no secure aggregation / differential privacy).
 # ruminatex
+
+
+link to our working website : https://aiorirepo.vercel.app/
